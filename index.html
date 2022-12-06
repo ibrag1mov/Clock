@@ -46,8 +46,51 @@
     </nav>
   </header>
 
-  <main>
-    <h1>Stopwatch sahifasiga o'ting!<br>bu sahifa tayyor emas! :(</h1>
+  <main class="main">
+    
+      <section>
+        <div class="container">
+
+          <div class="time-selection">
+            <h1 class="time-selection-title">Set the time</h1>
+            <div class="box">
+              <div class="box-time box-hours">
+                <h2>Hours</h2>
+                <div class="number">
+                  <span class="number-next hours-span"></span>
+                  <span class="number-prev"></span>
+                  <div id="box-hours" class="box-content">
+                    <input type="text" id="hours" value="0" maxlength="2">
+                  </div>
+                </div>
+              </div>
+              <div class="box-time box-minutes">
+                <h2>Minutes</h2>
+                <div class="number">
+                  <span class="number-next minutes-span"></span>
+                  <span class="number-prev"></span>
+                  <div id="box-minutes" class="box-content">
+                    <input type="text" id="minutes" value="0" maxlength="2">
+                  </div>
+                </div>
+              </div>
+              <div class="box-time box-seconds">
+                <h2>Seconds</h2>
+                <div class="number">
+                  <span class="number-next seconds-span"></span>
+                  <span class="number-prev"></span>
+                  <div id="box-seconds" class="box-content">
+                    <input type="text" id="seconds" value="0" maxlength="2">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="strat-btn" id="start">Start</button>
+          </div>
+          <div class="timer"></div>
+        </div>
+      </section>
+
   </main>
 
   <footer></footer>
