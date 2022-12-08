@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="css/fonts.css">
   <!-- style css -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/jquery.nice-number.css">
+
 </head>
 
 <body>
@@ -59,8 +61,10 @@
                 <div class="number">
                   <span class="number-next hours-span"></span>
                   <span class="number-prev"></span>
-                  <div id="box-hours" class="box-content">
-                    <input type="text" id="hours" value="0" maxlength="2">
+                  <div id="box-hours" class="box-content number-input">
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"  class="minus"></button>
+                    <input type="number" id="hours" name="" max="99" min="0" value="0" maxlength="2">
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
                   </div>
                 </div>
               </div>
@@ -69,8 +73,10 @@
                 <div class="number">
                   <span class="number-next minutes-span"></span>
                   <span class="number-prev"></span>
-                  <div id="box-minutes" class="box-content">
-                    <input type="text" id="minutes" value="0" maxlength="2">
+                  <div id="box-hours" class="box-content number-input">
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"  class="minus"></button>
+                    <input type="number" id="minutes" name="" max="99" min="0" value="0" maxlength="2">
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
                   </div>
                 </div>
               </div>
@@ -79,15 +85,20 @@
                 <div class="number">
                   <span class="number-next seconds-span"></span>
                   <span class="number-prev"></span>
-                  <div id="box-seconds" class="box-content">
-                    <input type="text" id="seconds" value="0" maxlength="2">
+                  <div id="box-hours" class="box-content number-input">
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"  class="minus"></button>
+                    <input type="number" id="seconds" name="" max="99" min="0" value="0" maxlength="2">
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
                   </div>
                 </div>
               </div>
             </div>
             <button class="strat-btn" id="start">Start</button>
           </div>
-          <div class="timer"></div>
+          <div class="timer">
+
+            
+          </div>
         </div>
       </section>
 
@@ -96,6 +107,7 @@
   <footer></footer>
 
   <!-- js -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
   <script src="js/pulign.js"></script>
   <script src="js/main.js"></script>
 </body>

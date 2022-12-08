@@ -17,7 +17,7 @@ a{
 }
 
 body{
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -52,6 +52,12 @@ nav{
   letter-spacing: 1px;
   font-weight: 700;
   font-size: 22px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .nav-title{
@@ -152,6 +158,12 @@ nav{
   display: none;
   border: none;
   background-color: transparent;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .dark-light{
@@ -160,6 +172,12 @@ nav{
   border: none;
   cursor: pointer;
   background-color: transparent;
+  -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
 }
 .dark-light-img,
 .nav-btn-img{
@@ -220,13 +238,14 @@ nav{
 /* ====Timer==== */
 
 .main{
-  height: 90vh;
-  background-color: #000d0f;
+  height: 200vh;
+  /* background-color: #000d0f; */
 }
 
 .time-selection{
   color: #00deff;
   padding: 80px 50px;
+  display: none;
 }
 
 .time-selection-title{
@@ -268,11 +287,30 @@ nav{
   border-radius: 40px;
   border: 2px solid rgba(255,255,255, .2);
   transition:  0.5s;
+  overflow: hidden;
 }
 .number:hover{
   width: 120px;
   border: 2px solid #fff;
 }
+
+.plus,
+.minus{
+  display: none;
+  transition: 0.5s;
+  /* border-radius: 50%; */
+}
+
+.number:hover .minus,
+.number:hover .plus{
+  display: block;
+}
+
+.plus:active,
+.minus:active{
+  background-color: rgba(255, 255, 255, 0.241);
+}
+
 
 .number-next{
   position: absolute;
@@ -288,6 +326,7 @@ nav{
   cursor: pointer;
   opacity: 0;
   transition: 0.5s;
+  pointer-events: none;
 }
 
 .number:hover .number-next{
@@ -309,6 +348,7 @@ nav{
   cursor: pointer;
   opacity: 0;
   transition: 0.5s;
+  pointer-events: none;
 }
 
 .number:hover .number-prev{
@@ -328,15 +368,13 @@ nav{
   color: #00deff;
   border: none;
   outline: none;
-  font-size: 25px;
-  border-radius: 40px;
+  font-size: 20px;
+  font-weight: 400;
   background-color: transparent;
+  /* background-color: #fff; */
 }
 
-#hours::placeholder{
-  color: #00deff;
 
-}
 .strat-btn{
   background: transparent;
   cursor: pointer;
@@ -375,6 +413,45 @@ nav{
   color: #000;
 }
 
+
+
+/* ==================================== */
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.number-input,
+.number-input * {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.number-input button {
+  outline:none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 48px;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+  z-index: 5;
+}
+
+
+.number-input input[type=number] {
+  border-radius: 40px;
+}
+/* ==================================== */
 
 
 /* RESPONSIVE */
