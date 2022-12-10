@@ -1,4 +1,4 @@
-"use strict"
+// "use strict"
 
 
 // dark-light
@@ -65,11 +65,22 @@ var numberHours=$('#box-hours');
 var InputHours=$('#hours'); 
 var InputMinutes=$('#minutes'); 
 var InputSeconds=$('#seconds'); 
-var numberNext=$$('.number-next');
-var numberPrev=$$('.number-prev');
+
 let startBtn=$('#start');
+let timeAdd=$('.time-selection');
+let timer=$('.timer');
+
+
 
 
 startBtn.addEventListener('click', (evt)=>{
+  
+  timeAdd.setAttribute('class', 'time-selection d-none')
+  timer.setAttribute('class', 'timer d-block')
+
   console.log(InputHours.value);
+
+  let timerHours=$('#soat');
+  
+  evt.preventDefault();
 })

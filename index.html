@@ -51,55 +51,86 @@
   <main class="main">
     
       <section>
-        <div class="container">
 
-          <div class="time-selection">
-            <h1 class="time-selection-title">Set the time</h1>
-            <div class="box">
-              <div class="box-time box-hours">
-                <h2>Hours</h2>
-                <div class="number">
-                  <span class="number-next hours-span"></span>
-                  <span class="number-prev"></span>
-                  <div id="box-hours" class="box-content number-input">
-                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"  class="minus"></button>
-                    <input type="number" id="hours" name="" max="99" min="0" value="0" maxlength="2">
-                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                  </div>
-                </div>
-              </div>
-              <div class="box-time box-minutes">
-                <h2>Minutes</h2>
-                <div class="number">
-                  <span class="number-next minutes-span"></span>
-                  <span class="number-prev"></span>
-                  <div id="box-hours" class="box-content number-input">
-                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"  class="minus"></button>
-                    <input type="number" id="minutes" name="" max="99" min="0" value="0" maxlength="2">
-                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                  </div>
-                </div>
-              </div>
-              <div class="box-time box-seconds">
-                <h2>Seconds</h2>
-                <div class="number">
-                  <span class="number-next seconds-span"></span>
-                  <span class="number-prev"></span>
-                  <div id="box-hours" class="box-content number-input">
-                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"  class="minus"></button>
-                    <input type="number" id="seconds" name="" max="99" min="0" value="0" maxlength="2">
-                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-                  </div>
+        <div class="time-selection">
+          <h1 class="time-selection-title">Set the time</h1>
+          <div class="box">
+            <div class="box-time box-hours">
+              <h2>Hours</h2>
+              <div class="number">
+                <span class="number-next hours-span"></span>
+                <span class="number-prev"></span>
+                <div id="box-hours" class="box-content number-input">
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"  class="minus"></button>
+                  <input type="number" id="hours" name="" max="99" min="0" value="0" maxlength="2">
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
                 </div>
               </div>
             </div>
-            <button class="strat-btn" id="start">Start</button>
+            <div class="box-time box-minutes">
+              <h2>Minutes</h2>
+              <div class="number">
+                <span class="number-next minutes-span"></span>
+                <span class="number-prev"></span>
+                <div id="box-hours" class="box-content number-input">
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"  class="minus"></button>
+                  <input type="number" id="minutes" name="" max="99" min="0" value="0" maxlength="2">
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                </div>
+              </div>
+            </div>
+            <div class="box-time box-seconds">
+              <h2>Seconds</h2>
+              <div class="number">
+                <span class="number-next seconds-span"></span>
+                <span class="number-prev"></span>
+                <div id="box-hours" class="box-content number-input">
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"  class="minus"></button>
+                  <input type="number" id="seconds" name="" max="99" min="0" value="0" maxlength="2">
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="timer">
+          <button class="strat-btn" id="start">Start</button>
+        </div>
 
-            
+        <div class="timer d-none">
+
+          <div class="circle-container center">
+            <div class="outer">
+             <div class="inner">
+              <div id="timer">
+                <span id="soat">00</span>
+                <span class="ikkinuqta">:</span>
+                <span id="minut">00</span>
+                <span class="ikkinuqta">:</span>
+                <span id="sekund">00</span>
+              </div>
+             </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="350.5" height="350.5">
+              <defs>
+                 <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#00ff00" />
+                    <!-- <stop offset="100%" stop-color="#00deff" /> -->
+                 </linearGradient>
+              </defs>
+              <circle cx="175" cy="175" r="171.8" stroke-linecap="round"/>
+            </svg>
+            </div>
+            <div class="timer-btn">
+              <div class="btn-left"> 
+                <button class="pause-btn">Pause</button>
+              </div>
+              <div class="btn-right">  
+                <button class="cancel-btn">Cancel</button>
+              </div>
+          </div>
           </div>
         </div>
+      
+  
       </section>
 
   </main>
